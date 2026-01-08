@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: abdullah-sms-bot
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_ADMIN_ID
+        sync: false
+      - key: PANEL_URL
+        sync: false
+      - key: PANEL_USERNAME
+        sync: false
+      - key: PANEL_PASSWORD
+        sync: false
+      - key: PORT
+        value: 3000
+    healthCheckPath: /health
+    autoDeploy: true
+    disk:
+      name: data
+      mountPath: /app/data
+      sizeGB: 1

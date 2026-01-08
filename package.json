@@ -39,7 +39,7 @@
     "cors": "^2.8.5",
     "helmet": "^7.1.0",
     "morgan": "^1.10.0",
-    "rate-limit": "^1.7.2",
+    "rate-limit": "latest",
     "express-rate-limit": "^7.1.5",
     "winston": "^3.11.0",
     "moment-timezone": "^0.5.43",
